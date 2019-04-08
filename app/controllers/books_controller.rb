@@ -12,6 +12,10 @@ class BooksController < ApplicationController
   def show
     book_id = params[:id].to_i
     @book = BOOKS[book_id]
-  end
 
+    # If the book is non-existant, give back a not_found/404 status code
+    if @book.nil?
+      head :not_found
+    end
+  end
 end
