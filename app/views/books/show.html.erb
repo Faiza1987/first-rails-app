@@ -1,4 +1,10 @@
-<h2> Book Details </h2>
+<h2>
+  <%= @book.title %>
+</h2>
 
-  <h3><%= @book[:title] %></h3>
-  <h4><%= @book[:author] %></h4>
+<h3>
+  <%= @book.author %>
+</h3>
+
+<%= link_to "Back to Books", books_path %>
+<%# <a href="/books"> Back to Books </a> %>

@@ -1,6 +1,16 @@
 
 <ul class="book-list">
   <% @books.each do |book| %>
-    <li><%= book[:title] %> by <%= book[:author] %></li>
+  
+    <%# <li> <a href= "books/<%= book.id%>
+    <%# <%= book.title %>  
+    <%# by <%= book.author %>
+    <%# </a></li>  %>
+  
+  <li>
+    <%= link_to book.title, book_path(book.id) %>
+    by <%= book.author%>
+  </li>
   <% end %>
 </ul>
+

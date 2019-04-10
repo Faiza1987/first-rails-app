@@ -6,12 +6,12 @@ class BooksController < ApplicationController
 ]
 
   def index
-    @books = BOOKS
+    @books = Book.all
   end
 
   def show
     book_id = params[:id].to_i
-    @book = BOOKS[book_id]
+    @book = Book.find_by(id: book_id)
 
     # If the book is non-existant, give back a not_found/404 status code
     if @book.nil?
