@@ -1,0 +1,10 @@
+<h2> Edit a book! </h2>
+<p> Please fill out the form below to add a new book to the Library.</p>
+
+<%= render partial: "form", locals: {
+  form_class: "edit-book",
+  action_name: "Update Book"
+} %>
+
+
+<%= link_to "Back to Books", books_path %>
